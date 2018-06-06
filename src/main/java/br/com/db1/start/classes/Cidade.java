@@ -14,7 +14,7 @@ import br.com.db1.start.tipos.Uf;
 public class Cidade {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
 	@Column(nullable = false, length = 50, name = "nome")
@@ -23,6 +23,8 @@ public class Cidade {
 	@Column(name = "uf", nullable = false)
 	@Enumerated(EnumType.STRING)
 	private Uf uf;
+	
+	
 
 	public Integer getId() {
 		return id;
